@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Do You Miss Me?</title>
+  <style>
+    body {
+      background-color: #ffe4ec;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #333;
+    }
+    .heart {
+      font-size: 16px;
+      white-space: pre;
+      color: red;
+      font-family: monospace;
+      margin-top: 20px;
+    }
+    button {
+      background-color: #ff6699;
+      border: none;
+      padding: 12px 24px;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff3366;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Do you miss me? ❤️</h1>
+
+<div class="heart">
+   **     **   
+  ****   ****  
+ ****** ****** 
+ ************* 
+  ***********  
+   *********   
+    *******    
+     *****     
+      ***      
+       *       
+</div>
+
+<div>
+  <button onclick="sayYes()">Yes</button>
+  <button onclick="sayNo()">No</button>
+</div>
+
+<script>
+const yesReactions = [
+  "Uy, baka 'ka na ng akong Querubin—pressing romantic agad! 😜",
+  "Salamat ha… you know that I love chicken nuggets gaya nang sobra! 🥹",
+  "Ay, grabe ka… na-miss kita agad, parang tinawag mo na ako ‘road’! 😍"
+];
+
+const noMemes = [
+  "https://www.youtube.com/watch?v=l43fstcVReo", // Filipino Viral Meme Compilation
+  "https://www.youtube.com/watch?v=XIcegPW4aeM"  // Robert B. Weide Pinoy Memes
+];
+
+// Audio files
+const cuteSound = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+const sadSound = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3");
+
+function sayYes() {
+  cuteSound.play();
+  alert(yesReactions[Math.floor(Math.random() * yesReactions.length)]);
+}
+
+function sayNo() {
+  sadSound.play();
+  alert("Ay naku, seryoso ka ba? *SOBSOB* (╯°□°）╯︵ ┻━┻");
+  window.open(noMemes[Math.floor(Math.random() * noMemes.length)], "_blank");
+}
+</script>
+
+</body>
+</html>
